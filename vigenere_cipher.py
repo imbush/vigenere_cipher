@@ -1,16 +1,15 @@
 #A simple vignere cipher/decipher program
 #Coded by Inle Bush
 
+#declares used variables
 alphabet = "abcdefghijklmnopqrstuvwxyz"
-
 running = True
-
 returntext = ""
 
 while running:
 
     #strips and lowercases cipher/decipher choice
-    ciph_deciph = input("Would you like to cipher or decipher a message? \n(Enter cipher or decipher): ").lower().strip()
+    ciph_deciph = input("\nWould you like to cipher or decipher a message? \n(Enter cipher or decipher): ").lower().strip()
     
     #Checks for a valid ciph_deciph 
     if ciph_deciph != "cipher" and ciph_deciph != "decipher":
@@ -44,9 +43,8 @@ while running:
                 if ciph_deciph == "cipher":
                     returntext = returntext + alphabet[(kencrypt_index + mencrypt_index) % len(alphabet)] #adds new letter to cipher text
                 else:
-                    print("d")
                     returntext = returntext + alphabet[(mencrypt_index - kencrypt_index) %len(alphabet)] #adds new letter to cipher text
-                    print(alphabet[(mencrypt_index - kencrypt_index) %len(alphabet)])
+            
             print("The " + ciph_deciph + "ed message is:\n" + returntext)
             break
         break
