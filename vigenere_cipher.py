@@ -4,7 +4,7 @@
 #declares used variables
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 running = True
-returntext = ""
+
 
 while running:
 
@@ -52,3 +52,4 @@ while running:
     #Asks if Program should continue
     if input("\nType exit to end the program. Type anything else to continue:\n").strip().lower() == "exit":
         running = False
+    returntext = ""
